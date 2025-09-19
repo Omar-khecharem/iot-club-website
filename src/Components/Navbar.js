@@ -44,7 +44,7 @@ const Navbar = () => {
           <button
             onClick={() => setOpen(!open)}
             type="button"
-            className="inline-flex absolute right-10 bottom-6 bg-[#eaeb2c] items-center p-2 w-10 h-10 justify-center text-sm  rounded-lg md:hidden  hover:text-white focus:ring-2 focus:ring-gray-200 z-50"
+            className="inline-flex absolute right-10 bottom-6 bg-white text-blue-950 items-center p-2 w-10 h-10 justify-center text-sm  rounded-lg md:hidden   z-50"
           >
             <span className="sr-only">Open main menu</span>
             {open ? (
