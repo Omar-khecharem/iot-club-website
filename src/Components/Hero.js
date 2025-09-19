@@ -5,9 +5,16 @@ import CountUp from "react-countup";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { ReactTyped as Typed } from "react-typed";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const Hero = () => {
   const logoRef = useRef(null);
+  useEffect(() => {
+  AOS.init({ duration: 1000 });
+}, []);
+
   const stats = [
     { end: 4, label: "Années d'expérience" },
     { end: 50, label: "Workshop réalisés" },
@@ -30,7 +37,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen " id="home">
+    <div className="relative w-full min-h-screen " id="home"  >
       {/* Particles background */}
       <Particles
         id="tsparticles"
@@ -39,11 +46,20 @@ const Hero = () => {
           background: { color: { value: "#07081e" } },
           fpsLimit: 60,
           interactivity: {
-            events: { onHover: { enable: true, mode: "repulse" }, resize: true },
+            events: {
+              onHover: { enable: true, mode: "repulse" },
+              resize: true,
+            },
           },
           particles: {
             color: { value: "#ffffff" },
-            links: { color: "#ffffff", distance: 150, enable: true, opacity: 0.2, width: 1 },
+            links: {
+              color: "#ffffff",
+              distance: 150,
+              enable: true,
+              opacity: 0.2,
+              width: 1,
+            },
             move: { enable: true, speed: 1.5, outModes: "bounce" },
             number: { value: 50, density: { enable: true, area: 800 } },
             opacity: { value: 0.5 },
@@ -58,22 +74,29 @@ const Hero = () => {
       {/* Contenu */}
       <section className="relative max-w-1/2 z-20">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16 w-full">
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center"  data-aos="fade-up" data-aos-duration="1000"  >
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
-               <Typed
-              strings={["IOT ISIMG", "Join Our Community!", "Innovation & Tech"]}
-              typeSpeed={100}  // vitesse de frappe
-              backSpeed={50}   // vitesse de suppression
-              loop              // boucle infinie
-            />
-           
+              <Typed
+                strings={[
+                  "IOT ISIMG",
+                  "Join Our Community!",
+                  "Innovation & Tech",
+                ]}
+                typeSpeed={100} // vitesse de frappe
+                backSpeed={50} // vitesse de suppression
+                loop // boucle infinie
+              />
             </h1>
             <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl">
-            Le Club IoT, actif depuis 4 ans, regroupe 4 départements : IoT, Développement Web, Développement Mobile et Intelligence Artificielle. Nous offrons des formations, participons à des hackathons et organisons des compétitions afin de développer les compétences et encourager l’innovation.
+              Le Club IoT, actif depuis 4 ans, regroupe 4 départements : IoT,
+              Développement Web, Développement Mobile et Intelligence
+              Artificielle. Nous offrons des formations, participons à des
+              hackathons et organisons des compétitions afin de développer les
+              compétences et encourager l’innovation.
             </p>
             <div className="flex md:flex-row flex-col items-center justify-center gap-5">
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeK9ubQwrFU4rf0bKCMG-xd5ucgE6fkoV5M86PYjvY6Qkuibw/viewform" 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeK9ubQwrFU4rf0bKCMG-xd5ucgE6fkoV5M86PYjvY6Qkuibw/viewform"
                 className="inline-flex justify-center items-center py-3 px-5 text-base font-bold text-center text-white rounded-3xl bg-[#524dd3] hover:bg-blue-800"
               >
                 Become a Member
@@ -91,9 +114,8 @@ const Hero = () => {
               {stats.map((stat, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <span className="text-5xl font-bold text-white">
-                    <CountUp end={stat.end} duration={3} /><span>
-                      +
-                    </span>
+                    <CountUp end={stat.end} duration={3} />
+                    {index > 0 && <span>+</span>} {/* + uniquement pour les autres */}
                   </span>
                   <span className="text-gray-300 mt-2">{stat.label}</span>
                 </div>
@@ -105,8 +127,17 @@ const Hero = () => {
             ref={logoRef}
             src={logo}
             alt="Logo"
-            className="flex-1 m-auto sm:h-96 sm:w-96 rounded-lg shadow-lg"
+            className="flex-1 m-auto sm:h-96 sm:w-96 rounded-lg shadow-lg 
+             hidden sm:block" // Desktop (VanillaTilt)
+              data-aos="fade-down"  data-aos-duration="1000" 
           />
+
+          {/* Version mobile avec rotation auto */}
+        <img
+  src={logo}
+  alt="Logo"
+  className="block sm:hidden m-auto h-72 w-72 rounded-lg shadow-lg mobile-rotate"
+/>
         </div>
       </section>
     </div>

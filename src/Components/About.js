@@ -1,5 +1,5 @@
 // src/Components/About.jsx
-import React from "react";
+import {React,useEffect} from "react";
 
 // Exemple d’images (remplace par les vraies)
 import presidentImg from "../Asstes/president.jpg";
@@ -10,6 +10,9 @@ import secretaireImg from "../Asstes/secretaire.jpg";
 import iaImg from "../Asstes/ia.jpg";
 import devWebImg from "../Asstes/devweb.jpg";
 import MobileImg from "../Asstes/devmobile.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const teamMembers = [
   {
@@ -77,8 +80,12 @@ const teamMembers = [
 ];
 
 const About = () => {
+    useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+  
   return (
-    <section id="about" className="bg-[#060921] text-white py-16 px-4">
+    <section id="about" className="bg-[#060921] text-white py-16 px-4" data-aos="fade-right" data-aos-duration="1000" >
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-4xl font-extrabold mb-4">Notre Équipe & Départements</h2>
         <p className="text-gray-300 max-w-2xl mx-auto">

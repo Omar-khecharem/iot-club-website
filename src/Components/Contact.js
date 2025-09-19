@@ -1,6 +1,7 @@
 // src/Components/ContactForm.jsx
-import React, { useState } from "react";
-
+import React, { useState,useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -36,8 +37,12 @@ const ContactForm = () => {
     }
   };
 
+    useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+  
   return (
-    <section id="contact" className="bg-[#060921] text-white py-16 px-4">
+    <section id="contact" className="bg-[#060921] text-white py-16 px-4" data-aos="zoom-in" >
       <div className="max-w-3xl mx-auto text-center mb-8">
         <h2 className="text-4xl font-extrabold mb-4">Contactez-nous</h2>
         <p className="text-gray-300">

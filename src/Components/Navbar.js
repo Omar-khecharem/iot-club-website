@@ -1,5 +1,5 @@
 import React, { useState } from "react"; 
-import logo from "../Asstes/logocol.png";
+import logo from "../Asstes/logo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -20,10 +20,8 @@ const Navbar = () => {
           href="https://www.facebook.com/IOTClubIsimg"
           className="flex items-center space-x-3 rtl:space-x-reverse "
         >
-          <img src={logo} className="h-16 w-16 object-cover   ml-3  " alt="Logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap">
-       
-          </span>
+          <img src={logo} className="h-16 w-16   border  p-2 rounded ml-3  " alt="Logo" />
+          
         </a>
 
         <div className="flex md:order-2 space-x-3">

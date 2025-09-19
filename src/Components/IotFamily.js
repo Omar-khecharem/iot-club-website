@@ -1,5 +1,5 @@
 // src/Components/IotFamily.jsx
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 
 // Exemple d'images avec l'année correspondante
 import img1 from "../Asstes/2021/family2021_1.jpg";
@@ -28,6 +28,8 @@ import img19 from "../Asstes/2025/family2025_2.jpg";
 import img20 from "../Asstes/2025/family2025_3.jpg";
 import img21 from "../Asstes/2025/family2025_4.jpg";
 import img22 from "../Asstes/2025/family2025_5.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 
@@ -59,6 +61,10 @@ const galleryImages = [
 const years = [2021, 2022, 2024, 2025];
 
 const IotFamily = () => {
+    useEffect(() => {
+  AOS.init({ duration: 1000 });
+}, []);
+
   const [filter, setFilter] = useState("all");
   const [showAll, setShowAll] = useState(false);
 
@@ -70,7 +76,7 @@ const IotFamily = () => {
   const imagesToShow = showAll ? filteredImages : filteredImages.slice(0, 8);
 
   return (
-    <section id="iot-family" className="bg-[#0d0f32] text-white py-16 px-4">
+    <section id="iot-family" className="bg-[#0d0f32] text-white py-16 px-4" data-aos="zoom-in-up" >
       <div className="max-w-6xl mx-auto text-center mb-8">
         <h2 className="text-4xl font-extrabold mb-4">IOT Family</h2>
         <p className="text-gray-300 max-w-2xl mx-auto">
