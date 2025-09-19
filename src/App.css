@@ -6,9 +6,11 @@
   margin: 0;
   padding: 0;
 }
-::selection {
-  background: #07081e; /* couleur de fond quand tu sélectionnes du texte */
-  color: #eaeb2c;      /* couleur du texte sélectionné */
+* {
+  user-select: none;
+  -webkit-user-select: none; /* Chrome, Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
 }
 .App-logo {
   height: 40vmin;
