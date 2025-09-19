@@ -29,7 +29,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen ">
+    <div className="relative w-full min-h-screen " id="home">
       {/* Particles background */}
       <Particles
         id="tsparticles"
