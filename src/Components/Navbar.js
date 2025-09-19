@@ -20,7 +20,7 @@ const Navbar = () => {
           href="https://www.facebook.com/IOTClubIsimg"
           className="flex items-center space-x-3 rtl:space-x-reverse "
         >
-          <img src={logo} className="h-16 w-16   border  p-2 rounded ml-3  " alt="Logo" />
+          <img src={logo} className="h-16 w-16  p-2  " alt="Logo" />
           
         </a>
 
