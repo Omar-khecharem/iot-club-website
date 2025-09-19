@@ -41,24 +41,24 @@ const galleryImages = [
   { src: img5, year: 2021 },
   { src: img6, year: 2022 },
   { src: img7, year: 2022 },
-  { src: img9, year: 2024 },
-  { src: img8, year: 2024 },
-  { src: img10, year: 2024 },
-  { src: img11, year: 2024},
-  { src: img12, year: 2024 },
-  { src: img13, year: 2024 },
-  { src: img14, year: 2024 },
-  { src: img15, year: 2024 },
-  { src: img16, year: 2024 },
-  { src: img18, year: 2025 },
-  { src: img19, year: 2025 },
-  { src: img20, year: 2025 },
-  { src: img21, year: 2025 },
-  { src: img22, year: 2025 },
+  { src: img9, year: 2023 },
+  { src: img8, year: 2023 },
+  { src: img10, year: 2023 },
+  { src: img11, year: 2023},
+  { src: img12, year: 2023 },
+  { src: img13, year: 2023 },
+  { src: img14, year: 2023 },
+  { src: img15, year: 2023 },
+  { src: img16, year: 2023 },
+  { src: img18, year: 2024 },
+  { src: img19, year: 2024 },
+  { src: img20, year: 2024 },
+  { src: img21, year: 2024 },
+  { src: img22, year: 2024 },
 
 ];
 
-const years = [2021, 2022, 2024, 2025];
+const years = [2021, 2022, 2023, 2024];
 
 const IotFamily = () => {
     useEffect(() => {
