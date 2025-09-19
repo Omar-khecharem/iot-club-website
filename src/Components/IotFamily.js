@@ -40,6 +40,7 @@ const galleryImages = [
   { src: img6, year: 2022 },
   { src: img7, year: 2022 },
   { src: img9, year: 2024 },
+  { src: img8, year: 2024 },
   { src: img10, year: 2024 },
   { src: img11, year: 2024},
   { src: img12, year: 2024 },

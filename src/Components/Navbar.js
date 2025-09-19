@@ -19,7 +19,7 @@ const Navbar = () => {
         </a>
 
         <div className="flex md:order-2 space-x-3">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeK9ubQwrFU4rf0bKCMG-xd5ucgE6fkoV5M86PYjvY6Qkuibw/viewform?usp=header" target="_blank"> 
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeK9ubQwrFU4rf0bKCMG-xd5ucgE6fkoV5M86PYjvY6Qkuibw/viewform?usp=header"  > 
 
 
           
