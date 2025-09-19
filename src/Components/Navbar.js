@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../Asstes/logo.png";
+import { Link } from "react-scroll";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -82,53 +83,62 @@ const Navbar = () => {
           } w-full md:flex md:w-auto md:order-1  `}
           id="navbar-sticky"
         >
-          <ul
-            className={`flex flex-col md:flex-row md:space-x-8 font-medium mt-4 md:mt-0
-              rounded-none md:rounded-lg 
-              bg-[#1b1933] md:bg-transparent 
-              border md:border-0 
-              p-4 md:p-0  top-8 left-5
-              fixed inset-0 md:static 
-              w-[90%] h-[90%] md:w-auto md:h-auto
-              z-40`}
-          >
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-white bg-blue-700 rounded-none md:rounded md:bg-transparent md:hover:text-blue-400"
-                aria-current="page"
-                onClick={() => setOpen(!open)}
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                className="block py-2 px-3 text-gray-300 hover:text-blue-400 rounded-none md:rounded"
-                onClick={() => setOpen(!open)}
-              >
-                À propos
-              </a>
-            </li>
-            <li>
-              <a
-                href="#iot-family"
-                className="block py-2 px-3 text-gray-300 hover:text-blue-400 rounded-none md:rounded"
-              >
-                Iot Family 
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="block py-2 px-3 text-gray-300 hover:text-blue-400 rounded-none md:rounded"
-                onClick={() => setOpen(!open)}
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
+    <ul
+  className={`flex flex-col md:flex-row md:space-x-8 font-medium mt-4 md:mt-0
+    rounded-none md:rounded-lg 
+    bg-[#1b1933] md:bg-transparent 
+    border md:border-0 
+    p-4 md:p-0  top-8 left-5
+    fixed inset-0 md:static 
+    w-[90%] h-[90%] md:w-auto md:h-auto
+    z-40`}
+>
+  <li>
+    <button
+      className="block py-2 px-3 text-white bg-blue-700 rounded-none md:rounded md:bg-transparent md:hover:text-blue-400"
+      onClick={() => {
+        document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+        setOpen(!open);
+      }}
+    >
+      Home
+    </button>
+  </li>
+  <li>
+    <button
+      className="block py-2 px-3 text-gray-300 hover:text-blue-400 rounded-none md:rounded"
+      onClick={() => {
+        document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+        setOpen(!open);
+      }}
+    >
+      À propos
+    </button>
+  </li>
+  <li>
+    <button
+      className="block py-2 px-3 text-gray-300 hover:text-blue-400 rounded-none md:rounded"
+      onClick={() => {
+        document.getElementById("iot-family").scrollIntoView({ behavior: "smooth" });
+        setOpen(!open);
+      }}
+    >
+      Iot Family
+    </button>
+  </li>
+  <li>
+    <button
+      className="block py-2 px-3 text-gray-300 hover:text-blue-400 rounded-none md:rounded"
+      onClick={() => {
+        document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+        setOpen(!open);
+      }}
+    >
+      Contact
+    </button>
+  </li>
+</ul>
+
         </div>
       </div>
     </nav>
