@@ -50,27 +50,30 @@ const teamMembers = [
   },
 
 
+ 
   {
     role: "IA",
-    name: "Rabie houssaini",
+    name: "Rabie Houssaini",
     img: iaImg,
     description:
-      "Travaille sur les projets liés à l’intelligence artificielle et à l’innovation technologique du club.",
+      "Spécialisé en intelligence artificielle, il encadre des formations sur le machine learning, le deep learning et l’innovation technologique au sein du club.",
   },
   {
     role: "Dev Web",
-    name: "Chamseddine nacer",
+    name: "Chamseddine Nacer",
     img: devWebImg,
     description:
-      "Développe et maintient le site web du club et les applications web nécessaires aux projets.",
+      "Passionné par le développement web, il anime des ateliers pratiques en HTML, CSS, JavaScript et frameworks modernes pour les membres du club.",
   },
   {
     role: "Dev Mobile",
-    name: "Mohamed Amine ben nssir",
+    name: "Mohamed Amine Ben Nssir",
     img: MobileImg,
     description:
-      "Développe et maintient le site web du club et les applications web nécessaires aux projets.",
+      "Expert en développement mobile, il propose des formations sur la création d’applications Android et iOS, allant de la conception à la mise en production.",
   },
+
+
 ];
 
 const About = () => {
