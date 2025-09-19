@@ -7,9 +7,9 @@ import IotFamily from "./Components/IotFamily";
 import Navbar from "./Components/Navbar";
 
 function App() {
-//   document.addEventListener('contextmenu',(e)=>{
-// e.preventDefault()
-//   })
+  document.addEventListener('contextmenu',(e)=>{
+ e.preventDefault()
+  })
   return (
     <div className="  App w-full bg-transparent ">
       <Navbar />
