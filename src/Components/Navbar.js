@@ -102,7 +102,7 @@ const Navbar = () => {
                 className="block py-2 px-3 text-white md:text-gray-300 md:hover:text-blue-400 rounded-md w-full text-left"
                 onClick={() => handleScroll("home")}
               >
-                Home
+                Accueil
               </button>
             </li>
             <li>
