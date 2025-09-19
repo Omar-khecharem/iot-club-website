@@ -21,21 +21,21 @@ const teamMembers = [
   },
     {
     role: "Secrétaire générale",
-    name: "Essya ",
+    name: "Essya marweni",
     img: secretaireImg,
     description:
       "Organise les réunions, rédige les comptes rendus et assure le suivi administratif du club.",
   },
     {
     role: "Finance",
-    name: "Seif Eddin islem",
+    name: "Seif El Islam El Anes",
     img: financeImg,
     description:
       "Gère le budget, les financements et les ressources financières pour les projets du club.",
   },
     {
     role: "Marketing",
-    name: "Shema",
+    name: "Chema mahfoudh",
     img: marketingImg,
     description:
       "Développe la communication, la promotion et la visibilité du club à travers les réseaux et événements.",
@@ -52,21 +52,21 @@ const teamMembers = [
 
   {
     role: "IA",
-    name: "Rabie Houssain",
+    name: "Rabie houssaini",
     img: iaImg,
     description:
       "Travaille sur les projets liés à l’intelligence artificielle et à l’innovation technologique du club.",
   },
   {
     role: "Dev Web",
-    name: "Chams Eddin Ben Nasr",
+    name: "Chamseddine nacer",
     img: devWebImg,
     description:
       "Développe et maintient le site web du club et les applications web nécessaires aux projets.",
   },
   {
     role: "Dev Mobile",
-    name: "Mouhammed Amine",
+    name: "Mohamed Amine ben nssir",
     img: MobileImg,
     description:
       "Développe et maintient le site web du club et les applications web nécessaires aux projets.",

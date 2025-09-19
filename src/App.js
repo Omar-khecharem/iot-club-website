@@ -7,13 +7,13 @@ import IotFamily from "./Components/IotFamily";
 import Navbar from "./Components/Navbar";
 
 function App() {
-  document.addEventListener('contextmenu',(e)=>{
-e.preventDefault()
-  })
+//   document.addEventListener('contextmenu',(e)=>{
+// e.preventDefault()
+//   })
   return (
     <div className="  App w-full bg-transparent ">
       <Navbar />
-      <div className=" relative mt-24 w-full min-h-screen overflow-hidden">
+      <div className=" relative mt-36 w-full min-h-screen overflow-hidden">
         <Hero />
        <About/>
        <IotFamily/>

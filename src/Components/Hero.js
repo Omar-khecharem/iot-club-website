@@ -4,20 +4,21 @@ import logo from "../Asstes/logo.png";
 import CountUp from "react-countup";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import { ReactTyped as Typed } from "react-typed";
 
 const Hero = () => {
   const logoRef = useRef(null);
   const stats = [
     { end: 4, label: "Années d'expérience" },
     { end: 50, label: "Workshop réalisés" },
-    { end: 50, label: "Membres du club" },
+    { end: 150, label: "Membres du club" },
   ];
 
   useEffect(() => {
     if (logoRef.current) {
       VanillaTilt.init(logoRef.current, {
         max: 25,
-        speed: 400,
+        speed: 200,
         glare: true,
         "max-glare": 0.4,
       });
@@ -59,12 +60,18 @@ const Hero = () => {
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16 w-full">
           <div className="flex flex-col justify-center">
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
-             Nous connectons les idées à la technologie
+               <Typed
+              strings={["IOT ISIMG", "Join Our Community!", "Innovation & Tech"]}
+              typeSpeed={100}  // vitesse de frappe
+              backSpeed={50}   // vitesse de suppression
+              loop              // boucle infinie
+            />
+           
             </h1>
             <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl">
-             Au Club IoT ISIMG, nous développons des projets innovants pour transformer les idées en prototypes réels. Rejoignez-nous pour apprendre, créer et partager votre passion pour l’IoT.
+            Le Club IoT, actif depuis 4 ans, regroupe 4 départements : IoT, Développement Web, Développement Mobile et Intelligence Artificielle. Nous offrons des formations, participons à des hackathons et organisons des compétitions afin de développer les compétences et encourager l’innovation.
             </p>
-            <div className="flex flex-row items-center justify-center gap-5">
+            <div className="flex md:flex-row flex-col items-center justify-center gap-5">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSeK9ubQwrFU4rf0bKCMG-xd5ucgE6fkoV5M86PYjvY6Qkuibw/viewform" 
                 className="inline-flex justify-center items-center py-3 px-5 text-base font-bold text-center text-white rounded-3xl bg-[#524dd3] hover:bg-blue-800"
@@ -84,7 +91,9 @@ const Hero = () => {
               {stats.map((stat, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <span className="text-5xl font-bold text-white">
-                    <CountUp end={stat.end} duration={3} />
+                    <CountUp end={stat.end} duration={3} /><span>
+                      +
+                    </span>
                   </span>
                   <span className="text-gray-300 mt-2">{stat.label}</span>
                 </div>
@@ -96,7 +105,7 @@ const Hero = () => {
             ref={logoRef}
             src={logo}
             alt="Logo"
-            className="flex-1 m-auto h-96 w-96 rounded-lg shadow-lg"
+            className="flex-1 m-auto sm:h-96 sm:w-96 rounded-lg shadow-lg"
           />
         </div>
       </section>
