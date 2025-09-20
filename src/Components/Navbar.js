@@ -1,27 +1,40 @@
-import React, { useState } from "react"; 
+import React, { useState, useEffect, useRef } from "react"; 
 import logo from "../Asstes/logo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
-    setOpen(false);
+    setOpen(false); // Ferme le menu après le clic
   };
 
+  // Fermer le menu si clic en dehors
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <nav className="bg-[#1b1f3a] md:w-[98%] w-[95%] fixed top-5 left-3 rounded-full z-50  pulse-shadow">
+    <nav className="bg-[#1b1f3a] md:w-[98%] w-[95%] fixed top-5 left-3 rounded-full z-50 pulse-shadow">
       <div className="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-white">
         {/* Logo */}
         <a
           href="https://www.facebook.com/IOTClubIsimg"
-          className="flex items-center space-x-3 rtl:space-x-reverse "
+          className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img src={logo} className="h-16 w-16  p-2  " alt="Logo" />
-          
+          <img src={logo} className="h-16 w-16 p-2" alt="Logo" />
         </a>
 
         <div className="flex md:order-2 space-x-3">
@@ -44,18 +57,11 @@ const Navbar = () => {
           <button
             onClick={() => setOpen(!open)}
             type="button"
-            className="inline-flex absolute right-10 bottom-6 bg-white text-blue-950 items-center p-2 w-10 h-10 justify-center text-sm  rounded-lg md:hidden   z-50"
+            className="inline-flex absolute right-10 bottom-6 bg-white text-blue-950 items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden z-50"
           >
             <span className="sr-only">Open main menu</span>
             {open ? (
-              <svg
-              className=""
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -64,19 +70,8 @@ const Navbar = () => {
                 />
               </svg>
             ) : (
-              <svg
-                className="w-5 h-5  "
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 17 14"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 1h15M1 7h15M1 13h15"
-                />
+              <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
               </svg>
             )}
           </button>
@@ -84,18 +79,11 @@ const Navbar = () => {
 
         {/* Menu */}
         <div
+          ref={menuRef}
           className={`${open ? "block" : "hidden"} md:flex md:w-auto md:order-1`}
         >
           <ul
-            className={`flex flex-col md:flex-row md:space-x-8 font-medium
-              mt-2 rounded-sm md:mt-0
-              bg-[#1b1933] md:bg-transparent
-              p-4 md:p-0
-              absolute md:static top-full left-0 md:left-auto w-full md:w-auto
-              rounded-b-lg md:rounded-none
-              z-50
-              space-y-4 md:space-y-0
-              h-auto max-h-[calc(100vh-64px)] overflow-auto`}
+            className={`flex flex-col md:flex-row md:space-x-8 font-medium mt-2 rounded-sm md:mt-0 bg-[#1b1933] md:bg-transparent p-4 md:p-0 absolute md:static top-full left-0 md:left-auto w-full md:w-auto rounded-b-lg md:rounded-none z-50 space-y-4 md:space-y-0 h-auto max-h-[calc(100vh-64px)] overflow-auto`}
           >
             <li>
               <button

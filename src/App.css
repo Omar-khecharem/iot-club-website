@@ -50,17 +50,15 @@
 
 /* index.css */
 @keyframes slow-rotate {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* classe utilitaire simple */
 .mobile-rotate {
-  animation: slow-rotate 2s ease-in-out ;
   transform-origin: center;
   will-change: transform;
+  animation: slow-rotate 2s linear ;
 }
-
 
 
 @keyframes pulse-shadow {
