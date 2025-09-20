@@ -99,7 +99,7 @@ const Hero = () => {
             </p>
             <div className="flex md:flex-row flex-col items-center justify-center gap-5">
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeK9ubQwrFU4rf0bKCMG-xd5ucgE6fkoV5M86PYjvY6Qkuibw/viewform"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfFkpKHAyWp27IHeTO3uXDSzW4w9IeZ7JEtfrushr4kTpBquQ/viewform"
                 className="inline-flex justify-center items-center py-3 px-5 text-base font-bold text-center text-white rounded-3xl bg-[#524dd3] hover:bg-blue-800"
               >
                 Become a Member

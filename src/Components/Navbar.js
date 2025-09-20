@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="flex md:order-2 space-x-3">
           {/* Bouton PC/Tablette */}
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeK9ubQwrFU4rf0bKCMG-xd5ucgE6fkoV5M86PYjvY6Qkuibw/viewform?usp=header"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfFkpKHAyWp27IHeTO3uXDSzW4w9IeZ7JEtfrushr4kTpBquQ/viewform"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex"
