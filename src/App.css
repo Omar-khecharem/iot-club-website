@@ -94,6 +94,11 @@
   animation: pulse-shadow 2.5s infinite ease-in-out;
 }
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
 /* Scrollbar pour tout le site */
 ::-webkit-scrollbar {

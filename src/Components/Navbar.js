@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"; 
+import React, { useState, useRef } from "react"; 
 import logo from "../Asstes/logo.png";
 
 const Navbar = () => {
@@ -10,21 +10,10 @@ const Navbar = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
-    setOpen(false); // Ferme le menu après le clic
+
   };
 
-  // Fermer le menu si clic en dehors
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+
 
   return (
     <nav className="bg-[#1b1f3ae1]/95 backdrop-blur-md md:w-[98%] w-[95%] fixed top-5 left-3 rounded-full z-50 pulse-shadow">
@@ -47,8 +36,7 @@ const Navbar = () => {
           >
             <button
               type="button"
-              className="text-white bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400
-               shadow shadow-cyan-400/50
+              className="text-white bg-[#524dd3]
                 active:scale-95
                transition-transform duration-200 focus:ring-4 focus:ring-blue-300 font-medium rounded-3xl text-sm px-4 py-2 sm:hidden md:block"
             >
@@ -86,7 +74,7 @@ const Navbar = () => {
           className={`${open ? "block" : "hidden"} md:flex md:w-auto md:order-1`}
         >
           <ul
-            className={`flex flex-col md:flex-row md:space-x-8 font-medium mt-2 md:mt-0 bg-[#1b1f3ae1]/95 shadow-none md:backdrop-blur-2xl     p-4 md:p-0 absolute md:static top-full left-0 md:left-auto w-full md:w-auto rounded-2xl rounded-b-lg md:rounded-none z-50   md:space-y-0   h-auto transition-colors      max-h-[calc(100vh-64px)] overflow-auto`}
+            className={`flex flex-col md:flex-row md:space-x-8 font-medium mt-2 md:mt-0 bg-[#1b1f3ae1]/70 shadow-none md:bg-transparent    p-4 md:p-0 absolute md:static top-full left-0 md:left-auto w-full md:w-auto rounded-2xl rounded-b-lg md:rounded-none z-50   md:space-y-0   h-auto transition-colors      max-h-[calc(100vh-64px)] overflow-auto`}
           >
             <li>
               <button
@@ -124,13 +112,13 @@ const Navbar = () => {
             {/* Bouton mobile */}
             <li className="md:hidden">
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeK9ubQwrFU4rf0bKCMG-xd5ucgE6fkoV5M86PYjvY6Qkuibw/viewform?usp=header"
-                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfFkpKHAyWp27IHeTO3uXDSzW4w9IeZ7JEtfrushr4kTpBquQ/viewform"
+            
                 rel="noopener noreferrer"
               >
                 <button className="w-full md:w-auto text-center py-3 px-5 font-bold text-white rounded-3xl
-               bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400
-               shadow shadow-cyan-400/50
+             bg-[#524dd3]
+             shadow shadow-cyan-200/40
                 active:scale-95
                transition-transform duration-200">
                   Become a Member

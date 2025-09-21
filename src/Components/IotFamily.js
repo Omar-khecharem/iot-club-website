@@ -31,6 +31,10 @@ import img22 from "../Asstes/2025/family2025_5.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+const newImages = Array.from({ length: 68 }, (_, i) => ({
+  src: require(`../Asstes/images/${i + 1}.jpg`),
+  year: 2024 + Math.floor(i / 17), // adapte selon les années
+}));
 
 
 const galleryImages = [
@@ -56,6 +60,7 @@ const galleryImages = [
   { src: img21, year: 2024 },
   { src: img22, year: 2024 },
 
+...newImages
 ];
 
 const years = [2021, 2022, 2023, 2024];
@@ -75,6 +80,10 @@ const IotFamily = () => {
 
   const imagesToShow = showAll ? filteredImages : filteredImages.slice(0, 8);
 
+
+
+
+
   return (
     <section id="iot-family" className="bg-[#0d0f32] text-white py-16 px-4" data-aos="zoom-in-up" >
       <div className="max-w-6xl mx-auto text-center mb-8">
@@ -90,8 +99,8 @@ const IotFamily = () => {
         <button
           className={`px-4 py-2 rounded-full font-semibold ${
             filter === "all"
-              ? "bg-blue-700 text-white"
-              : "bg-gray-700 text-gray-300 hover:bg-blue-600"
+              ? "bg-[#524dd3] text-white"
+              : "bg-gray-700 text-gray-300 hover:bg-[#524dd3]"
           }`}
           onClick={() => {
             setFilter("all");
@@ -106,7 +115,7 @@ const IotFamily = () => {
             className={`px-4 py-2 rounded-full font-semibold ${
               filter === year
                 ? "bg-blue-700 text-white"
-                : "bg-gray-700 text-gray-300 hover:bg-blue-600"
+                : "bg-gray-700 text-gray-300 hover:bg-[#524dd3]"
             }`}
             onClick={() => {
               setFilter(year);
@@ -119,32 +128,44 @@ const IotFamily = () => {
       </div>
 
       {/* Galerie */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {imagesToShow.map((img, index) => (
-          <div
-            key={index}
-            className="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src={img.src}
-              alt={`IOT Family ${img.year}`}
-              className="w-full h-60 object-cover"
-            />
-          </div>
-        ))}
-      </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  {imagesToShow.map((img, index) => (
+    <div
+      key={index}
+      className="overflow-hidden rounded-xl shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl"
+      style={{ opacity: 0, animation: `fadeIn 0.5s forwards ${index * 0.1}s` }}
+    >
+      <img
+        src={img.src}
+        alt={`IOT Family ${img.year}`}
+        className="w-full h-60 object-cover"
+      />
+    </div>
+  ))}
+</div>
+
 
       {/* Bouton Voir plus */}
-      {!showAll && filteredImages.length > 8 && (
-        <div className="text-center mt-8">
-          <button
-            className="px-6 py-3 bg-[#524dd3] text-white rounded-full hover:bg-blue-600 transition"
-            onClick={() => setShowAll(true)}
-          >
-            Voir plus
-          </button>
-        </div>
-      )}
+      <div className="text-center mt-8">
+  {!showAll && filteredImages.length > 8 && (
+    <button
+      className="px-6 py-3 bg-[#524dd3] text-white rounded-full hover:bg-blue-600 transition mx-2"
+      onClick={() => setShowAll(true)}
+    >
+      Voir plus
+    </button>
+  )}
+
+  {showAll && filteredImages.length > 8 && (
+    <button
+      className="px-6 py-3 bg-[#524dd3] text-white rounded-full hover:bg-blue-600 transition mx-2"
+      onClick={() => setShowAll(false)}
+    >
+      Voir moins
+    </button>
+  )}
+</div>
+
     </section>
   );
 };
