@@ -86,7 +86,7 @@ const Navbar = () => {
           className={`${open ? "block" : "hidden"} md:flex md:w-auto md:order-1`}
         >
           <ul
-            className={`flex flex-col md:flex-row md:space-x-8 font-medium mt-2 md:mt-0 bg-[#1b1933]/90 backdrop-blur-md  md:bg-transparent p-4 md:p-0 absolute md:static top-full left-0 md:left-auto w-full md:w-auto rounded-2xl rounded-b-lg md:rounded-none z-50   md:space-y-0 shadow-lg h-auto transition-colors  max-h-[calc(100vh-64px)] overflow-auto`}
+            className={`flex flex-col md:flex-row md:space-x-8 font-medium mt-2 md:mt-0   bg-[#1b1933]/90 backdrop-blur-md md:shadow-none  md:bg-[#1b1933] p-4 md:p-0 absolute md:static top-full left-0 md:left-auto w-full md:w-auto rounded-2xl rounded-b-lg md:rounded-none z-50   md:space-y-0 shadow-lg h-auto transition-colors  max-h-[calc(100vh-64px)] overflow-auto`}
           >
             <li>
               <button
