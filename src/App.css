@@ -63,13 +63,13 @@
 
 @keyframes pulse-shadow {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(82, 77, 211, 0.4);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4), 0 0 20px rgba(138, 43, 226, 0.4);
   }
   50% {
-    box-shadow: 0 0 25px rgba(82, 77, 211, 0.7);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.7), 0 0 35px rgba(138, 43, 226, 0.7);
   }
 }
 
 .pulse-shadow {
-  animation: pulse-shadow 2s infinite ease-in-out;
+  animation: pulse-shadow 2.5s infinite ease-in-out;
 }
