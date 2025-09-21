@@ -78,42 +78,73 @@ const Hero = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
-              <Typed
-                strings={[
-                  "IOT ISIMG",
-                  "Join Our Community!",
-                  "Innovation & Tech",
-                ]}
-                typeSpeed={100} // vitesse de frappe
-                backSpeed={50} // vitesse de suppression
-                loop // boucle infinie
-              />
-            </h1>
-            <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl">
-              Le Club IoT, actif depuis 4 ans, regroupe 4 départements : IoT,
-              Développement Web, Développement Mobile et Intelligence
-              Artificielle. Nous offrons des formations, participons à des
-              hackathons et organisons des compétitions afin de développer les
-              compétences et encourager l’innovation.
-            </p>
-            <div className="flex md:flex-row flex-col items-center justify-center gap-5">
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfFkpKHAyWp27IHeTO3uXDSzW4w9IeZ7JEtfrushr4kTpBquQ/viewform"
-                className="inline-flex justify-center items-center py-3 px-5 text-base font-bold text-center text-white rounded-3xl bg-[#524dd3] hover:bg-blue-800"
-              >
-                Become a Member
-              </a>
-              <a
-                href="#about"
-                className="py-3 px-5 sm:ms-4 text-sm font-bold text-[#524dd3] bg-white rounded-3xl border-4 border-[#524dd3] hover:bg-gray-100 hover:text-blue-700"
-              >
-                Learn more
-              </a>
-            </div>
+<h1 className="mb-6 text-4xl font-extrabold tracking-tight leading-tight md:text-5xl lg:text-6xl text-white relative">
+  <Typed
+    strings={[
+      "IOT ISIMG",
+      "Rejoignez notre communauté !",
+      "Innovation & Technologie",
+    ]}
+    typeSpeed={100}
+    backSpeed={50}
+    loop
+    smartBackspace={true}
+    className="text-white text-center
+      before:absolute before:inset-0 before:blur-[12px] 
+      before:content-[''] 
+      animate-pulse-neon"
+  />
+</h1>
+
+
+
+
+
+
+           <p className="mb-8 text-lg lg:text-xl font-normal text-gray-300 leading-relaxed max-w-xl">
+  Le Club IoT, actif depuis 4 ans, regroupe 4 départements :{" "}
+  <span className="text-[#524dd3] font-semibold">IoT</span>,{" "}
+  <span className="text-[#06b6d4] font-semibold">Développement Web</span>,{" "}
+  <span className="text-[#facc15] font-semibold">Développement Mobile</span> et{" "}
+  <span className="text-[#10b981] font-semibold">Intelligence Artificielle</span>.  
+  Nous offrons des <span className="text-pink-400">formations</span>, participons à des{" "}
+  <span className="text-purple-400">hackathons</span> et organisons des{" "}
+  <span className="text-orange-400">compétitions</span> afin de développer les compétences
+  et encourager l’innovation.
+</p>
+
+
+
+<div className="flex md:flex-row flex-col items-center justify-center gap-4 w-full px-4">
+  {/* Bouton principal */}
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSfFkpKHAyWp27IHeTO3uXDSzW4w9IeZ7JEtfrushr4kTpBquQ/viewform"
+    className="w-full md:w-auto text-center py-3 px-5 font-bold text-white rounded-3xl
+               bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400
+               shadow shadow-cyan-400/50
+               hover:scale-105 active:scale-95
+               transition-transform duration-200"
+  >
+      Become a Member
+  </a>
+
+  {/* Bouton secondaire */}
+  <a
+    href="#about"
+    className="w-full md:w-auto text-center py-3 px-5 font-bold text-cyan-500 bg-white
+               rounded-3xl border-2 border-cyan-500
+               shadow-md hover:bg-cyan-500 hover:text-white
+               transition-all duration-200"
+  >
+ Learn more
+  </a>
+</div>
+
+
+
 
             {/* Counters */}
-            <div className="w-full py-16 flex flex-col sm:flex-row justify-center items-center sm:space-x-12 space-y-8 sm:space-y-0">
+            <div className="w-full py-16 flex flex-col sm:flex-row justify-center items-center sm:space-x-12 space-y-4 sm:space-y-0">
               {stats.map((stat, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <span className="text-5xl font-bold text-white">

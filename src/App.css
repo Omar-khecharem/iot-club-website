@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
 }
+
 * {
   user-select: none;
   -webkit-user-select: none; /* Chrome, Safari */
@@ -53,12 +54,31 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+/* Rotation oscillante gauche-droite pour mobile */
+@keyframes mobile-rotate {
+  0% { transform: rotate(-8deg) scale(1); }
+  50% { transform: rotate(8deg) scale(1.05); }
+  100% { transform: rotate(-8deg) scale(1); }
+}
 
 .mobile-rotate {
-  transform-origin: center;
-  will-change: transform;
-  animation: slow-rotate 2s linear ;
+  animation: mobile-rotate 4s infinite ease-in-out;
+  transform-origin: center; /* pivot au centre */
 }
+
+@keyframes pulse-neon {
+  0%, 100% {
+    text-shadow: 0 0 8px #8b5cf6, 0 0 16px #3b82f6, 0 0 24px #22c55e;
+  }
+  50% {
+    text-shadow: 0 0 12px #8b5cf6, 0 0 24px #3b82f6, 0 0 36px #22c55e;
+  }
+}
+
+.animate-pulse-neon {
+  animation: pulse-neon 2s infinite alternate;
+}
+
 
 
 @keyframes pulse-shadow {
@@ -72,4 +92,26 @@
 
 .pulse-shadow {
   animation: pulse-shadow 2.5s infinite ease-in-out;
+}
+
+
+/* Scrollbar pour tout le site */
+::-webkit-scrollbar {
+  width: 12px;       /* largeur verticale */
+  height: 12px;      /* hauteur horizontale */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(24, 25, 58, 0.3); /* fond sombre transparent */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8b5cf6, #06b6d4); /* violet → cyan */
+  border-radius: 10px;
+  border: 3px solid rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #06b6d4, #8b5cf6); /* inverse au hover */
 }

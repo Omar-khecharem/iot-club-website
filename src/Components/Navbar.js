@@ -83,7 +83,7 @@ const Navbar = () => {
           className={`${open ? "block" : "hidden"} md:flex md:w-auto md:order-1`}
         >
           <ul
-            className={`flex flex-col md:flex-row md:space-x-8 font-medium mt-2 rounded-sm md:mt-0 bg-[#1b1933] md:bg-transparent p-4 md:p-0 absolute md:static top-full left-0 md:left-auto w-full md:w-auto rounded-b-lg md:rounded-none z-50 space-y-4 md:space-y-0 h-auto max-h-[calc(100vh-64px)] overflow-auto`}
+            className={`flex flex-col md:flex-row md:space-x-8 font-medium mt-2 md:mt-0 bg-[#1b1933]/90 backdrop-blur-md  md:bg-transparent p-4 md:p-0 absolute md:static top-full left-0 md:left-auto w-full md:w-auto rounded-2xl rounded-b-lg md:rounded-none z-50   md:space-y-0 shadow-lg h-auto transition-colors  max-h-[calc(100vh-64px)] overflow-auto`}
           >
             <li>
               <button
@@ -125,7 +125,11 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="w-full text-center text-white bg-[#524dd3] hover:bg-blue-800 font-medium rounded-3xl py-2 px-4">
+                <button className="w-full md:w-auto text-center py-3 px-5 font-bold text-white rounded-3xl
+               bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400
+               shadow shadow-cyan-400/50
+                active:scale-95
+               transition-transform duration-200">
                   Become a Member
                 </button>
               </a>

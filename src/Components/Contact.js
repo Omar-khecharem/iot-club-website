@@ -95,7 +95,7 @@ const ContactForm = () => {
 
         <button
           type="submit"
-          className="w-full py-3 bg-blue-700 rounded-lg text-white font-semibold hover:bg-blue-600 transition"
+          className="w-full py-3 bg-[#524dd3] rounded-lg text-white font-semibold hover:bg-blue-600 transition"
         >
           Envoyer
         </button>

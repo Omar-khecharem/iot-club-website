@@ -93,23 +93,39 @@ const About = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {teamMembers.map((member, index) => (
-          <div
-            key={index}
-            className="bg-[#1b1933] rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src={member.img}
-              alt={member.role}
-              className="w-32 h-32 rounded-full object-cover mb-4"
-            />
-            <h3 className="text-xl font-semibold">{member.role}</h3>
-            <p className="text-gray-300 text-center mt-2 mb-2 font-medium">{member.name}</p>
-            <p className="text-gray-400 text-sm text-center">{member.description}</p>
-          </div>
-        ))}
-      </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
+  {teamMembers.map((member, index) => (
+    <div
+      key={index}
+      className="bg-[#1b1933] rounded-2xl shadow-lg p-6 flex flex-col items-center text-center
+                 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+      data-aos={index % 2 === 0 ? "fade-up" : "fade-down"}
+      data-aos-delay={index * 150}
+    >
+      {/* Image simple et nette */}
+      <img
+        src={member.img}
+        alt={member.role}
+        className="w-32 h-32 rounded-full object-cover mb-4 border-2 border-[#524dd3]"
+      />
+
+      {/* Rôle clair */}
+      <h3 className="text-xl font-bold text-white mb-1">{member.role}</h3>
+
+      {/* Ligne d’accent discrète */}
+      <div className="mt-1 w-12 h-1 rounded-full bg-[#524dd3] mb-2"></div>
+
+      {/* Nom */}
+      <p className="text-gray-100 font-medium mb-2">{member.name}</p>
+
+      {/* Description */}
+      <p className="text-gray-300 text-sm leading-relaxed">{member.description}</p>
+    </div>
+  ))}
+</div>
+
+
+
     </section>
   );
 };
