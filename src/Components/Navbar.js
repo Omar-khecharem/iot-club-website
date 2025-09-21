@@ -27,7 +27,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-[#1b1f3a]/70 backdrop-blur-md md:w-[98%] w-[95%] fixed top-5 left-3 rounded-full z-50 pulse-shadow">
+    <nav className="bg-[#1b1f3ae1]/95 backdrop-blur-md md:w-[98%] w-[95%] fixed top-5 left-3 rounded-full z-50 pulse-shadow">
       <div className="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-white">
         {/* Logo */}
         <a
@@ -86,11 +86,11 @@ const Navbar = () => {
           className={`${open ? "block" : "hidden"} md:flex md:w-auto md:order-1`}
         >
           <ul
-            className={`flex flex-col md:flex-row md:space-x-8 font-medium mt-2 md:mt-0   bg-[#1b1933]/90 backdrop-blur-md md:shadow-none  md:bg-[#1b1933] p-4 md:p-0 absolute md:static top-full left-0 md:left-auto w-full md:w-auto rounded-2xl rounded-b-lg md:rounded-none z-50   md:space-y-0 shadow-lg h-auto transition-colors  max-h-[calc(100vh-64px)] overflow-auto`}
+            className={`flex flex-col md:flex-row md:space-x-8 font-medium mt-2 md:mt-0 bg-[#1b1f3ae1]/95 shadow-none md:backdrop-blur-2xl     p-4 md:p-0 absolute md:static top-full left-0 md:left-auto w-full md:w-auto rounded-2xl rounded-b-lg md:rounded-none z-50   md:space-y-0   h-auto transition-colors      max-h-[calc(100vh-64px)] overflow-auto`}
           >
             <li>
               <button
-                className="block py-2 px-3 text-white md:text-gray-300 md:hover:text-blue-400 rounded-md w-full text-left"
+                className="block py-2 px-3 text-white md:text-gray-300  md:hover:text-blue-400 rounded-md w-full text-left"
                 onClick={() => handleScroll("home")}
               >
                 Accueil
