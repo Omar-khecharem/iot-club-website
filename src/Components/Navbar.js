@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-white">
         {/* Logo */}
         <a
-          href="https://www.facebook.com/IOTClubIsimg"
+          href=""
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img src={logo} className="h-16 w-16 p-2" alt="Logo" />
@@ -29,7 +29,7 @@ const Navbar = () => {
         <div className="flex md:order-2 space-x-3">
           {/* Bouton PC/Tablette */}
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfFkpKHAyWp27IHeTO3uXDSzW4w9IeZ7JEtfrushr4kTpBquQ/viewform"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfdoTOdGclvdZak8o74nKJm_X3c19SF7bxTnl5kueVu2nPVNQ/viewform"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex"

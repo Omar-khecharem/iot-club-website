@@ -152,7 +152,7 @@ const Hero = () => {
             <div className="flex md:flex-row flex-col items-center justify-center gap-4 w-full px-4">
               {/* Bouton principal */}
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfFkpKHAyWp27IHeTO3uXDSzW4w9IeZ7JEtfrushr4kTpBquQ/viewform"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfdoTOdGclvdZak8o74nKJm_X3c19SF7bxTnl5kueVu2nPVNQ/viewform"
                 className="w-full md:w-auto text-center py-3 px-5 font-bold text-white rounded-3xl
              bg-[#524dd3]
                hover:scale-105 active:scale-95
