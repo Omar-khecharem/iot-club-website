@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-white">
         {/* Logo */}
         <a
-          href=""
+       
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img src={logo} className="h-16 w-16 p-2" alt="Logo" />
