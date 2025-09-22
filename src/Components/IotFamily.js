@@ -85,7 +85,7 @@ const IotFamily = () => {
 
 
   return (
-    <section id="iot-family" className="bg-[#0d0f32] text-white py-16 px-4" data-aos="zoom-in-up" >
+    <section id="iot-family" className="bg-[#0d0f32] text-white py-16 px-4" >
       <div className="max-w-6xl mx-auto text-center mb-8">
         <h2 className="text-4xl font-extrabold mb-4">IOT Family</h2>
         <p className="text-gray-300 max-w-2xl mx-auto">
@@ -133,7 +133,9 @@ const IotFamily = () => {
     <div
       key={index}
       className="overflow-hidden rounded-xl shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl"
-      style={{ opacity: 0, animation: `fadeIn 0.5s forwards ${index * 0.1}s` }}
+      
+      data-aos={index % 2 === 0 ? "fade-right" : "fade-left"} // 👈 alterne gauche/droite
+      data-aos-delay={index * 100} // 👈 petit délai progressif (100ms, 200ms…)
     >
       <img
         src={img.src}
