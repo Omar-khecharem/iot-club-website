@@ -30,7 +30,7 @@ const Navbar = () => {
           {/* Bouton PC/Tablette */}
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfdoTOdGclvdZak8o74nKJm_X3c19SF7bxTnl5kueVu2nPVNQ/viewform"
-            target="_blank"
+            
             rel="noopener noreferrer"
             className="hidden md:inline-flex"
           >
