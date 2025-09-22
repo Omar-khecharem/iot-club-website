@@ -36,7 +36,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen md:flex md:justify-center " id="home">
+    <div className="relative w-full min-h-screen md:flex md:justify-center  " id="home">
       {/* Particles background */}
       <Particles
         id="tsparticles"
