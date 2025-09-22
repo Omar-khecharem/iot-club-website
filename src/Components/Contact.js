@@ -1,5 +1,5 @@
 // src/Components/ContactForm.jsx
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const ContactForm = () => {
@@ -37,16 +37,21 @@ const ContactForm = () => {
     }
   };
 
-    useEffect(() => {
+  useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
-  
+
   return (
-    <section id="contact" className="bg-[#060921] text-white py-16 px-4" data-aos="zoom-in" >
+    <section
+      id="contact"
+      className="bg-[#060921] text-white py-16 px-4"
+      data-aos="zoom-in"
+    >
       <div className="max-w-3xl mx-auto text-center mb-8">
         <h2 className="text-4xl font-extrabold mb-4">Contactez-nous</h2>
         <p className="text-gray-300">
-          Vous avez une question ou souhaitez collaborer avec nous ? Remplissez ce formulaire.
+          Vous avez une question ou souhaitez collaborer avec nous ? Remplissez
+          ce formulaire.
         </p>
       </div>
 
@@ -62,6 +67,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            required
           />
           <input
             type="email"
@@ -75,6 +81,7 @@ const ContactForm = () => {
         </div>
 
         <input
+          required
           type="text"
           name="subject"
           placeholder="Sujet"
