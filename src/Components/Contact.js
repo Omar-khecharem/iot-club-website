@@ -107,7 +107,7 @@ const ContactForm = () => {
           Envoyer
         </button>
 
-        {status && <p className="mt-4 text-center text-green-400">{status}</p>}
+        {status && <p className="mt-4 text-center text-[#f2ea1b]">{status}</p>}
       </form>
     </section>
   );
