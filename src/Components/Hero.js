@@ -178,7 +178,12 @@ const Hero = () => {
               {stats.map((stat, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <span className="text-5xl font-bold text-white">
-                    <CountUp end={stat.end} duration={3} />
+                    <CountUp 
+                    end={stat.end} 
+                    duration={3} 
+                    enableScrollSpy={true}
+                     scrollSpyOnce={false}  
+                    />
                     {index > 0n && <span>+</span>}
                   </span>
                   <span className="text-gray-300 mt-2">{stat.label}</span>
