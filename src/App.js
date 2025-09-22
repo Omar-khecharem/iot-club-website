@@ -51,12 +51,12 @@ function App() {
   {showButton && (
   <button
     onClick={scrollToTop}
-    className="fixed bottom-6 right-6 flex items-center justify-center 
+    className="fixed bottom-10 right-6 flex items-center justify-center 
                
                 shadow-lg 
                transition-all duration-300"
   >
-    <img src={arraow} alt="arrow" className="h-12 w-12  " />
+    <img src={arraow} alt="arrow" className="h-14 w-14  " />
   </button>
 )}
 
