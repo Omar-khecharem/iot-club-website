@@ -9,8 +9,9 @@ import Navbar from "./Components/Navbar";
 
 
 function App() {
- 
-
+ document.addEventListener('contextmenu',(e)=>{
+  e.preventDefault();
+ })
   return (
     <div className="App w-full bg-transparent">
       <Navbar />
