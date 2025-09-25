@@ -10,6 +10,7 @@ import secretaireImg from "../Asstes/secretaire.jpg";
 import iaImg from "../Asstes/ia.jpg";
 import devWebImg from "../Asstes/devweb.jpg";
 import MobileImg from "../Asstes/devmobile.jpg";
+import iot from "../Asstes/iot.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -75,6 +76,13 @@ const teamMembers = [
     description:
       "Expert en développement mobile, il propose des formations sur la création d’applications Android et iOS, allant de la conception à la mise en production.",
   },
+{
+  role: "Expert IoT",
+  name: "Latifa Bribri",
+  img: iot, 
+  description:
+    "Spécialiste en Internet des objets, elle accompagne les projets connectés de la conception des dispositifs à leur intégration, et propose des formations pratiques pour maîtriser les technologies IoT.",
+}
 
 
 ];
