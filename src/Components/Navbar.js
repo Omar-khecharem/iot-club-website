@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"; 
+import React, { useState, useRef } from "react";
 import logo from "../Asstes/logo.png";
 
 const Navbar = () => {
@@ -10,27 +10,27 @@ const Navbar = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
-
   };
 
-
-
   return (
-    <nav className="bg-[#1b1f3ae1]/95 backdrop-blur-md md:w-[98%] w-[95%] fixed top-5 left-3 rounded-full z-50 pulse-shadow">
+    <nav className="bg-[#1b1f3ae1]/95 backdrop-blur-md md:w-[98%] w-[95%] fixed top-5 left-4 rounded-full z-50 pulse-shadow">
       <div className="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-white">
         {/* Logo */}
         <a
-       href="#home"
+          href="#home"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img src={logo} className="h-16 w-16 p-2" alt="Logo" />
+          <img
+            src={logo}
+            className="h-10 w-10 p-1 md:h-16 md:w-16 md:p-2"
+            alt="Logo"
+          />
         </a>
 
         <div className="flex md:order-2 space-x-3">
           {/* Bouton PC/Tablette */}
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfdoTOdGclvdZak8o74nKJm_X3c19SF7bxTnl5kueVu2nPVNQ/viewform"
-            
             rel="noopener noreferrer"
             className="hidden md:inline-flex"
           >
@@ -48,7 +48,7 @@ const Navbar = () => {
           <button
             onClick={() => setOpen(!open)}
             type="button"
-            className="inline-flex absolute right-10 bottom-7 bg-white text-blue-950 items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden z-50"
+            className="inline-flex absolute right-10 bottom-4 bg-white text-blue-950 items-center p-2 w-9 h-9 justify-center text-sm rounded-lg md:hidden z-50"
           >
             <span className="sr-only">Open main menu</span>
             {open ? (
@@ -61,8 +61,19 @@ const Navbar = () => {
                 />
               </svg>
             ) : (
-              <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+              <svg
+                className="w-5 h-5"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
               </svg>
             )}
           </button>
@@ -71,7 +82,9 @@ const Navbar = () => {
         {/* Menu */}
         <div
           ref={menuRef}
-          className={`${open ? "block" : "hidden"} md:flex md:w-auto md:order-1`}
+          className={`${
+            open ? "block" : "hidden"
+          } md:flex md:w-auto md:order-1`}
         >
           <ul
             className={`flex flex-col md:flex-row md:space-x-8 font-medium mt-2 md:mt-0 bg-[#1b1f3ae1]/70 shadow-none md:bg-transparent    p-4 md:p-0 absolute md:static top-full left-0 md:left-auto w-full md:w-auto rounded-2xl rounded-b-lg md:rounded-none z-50   md:space-y-0   h-auto transition-colors      max-h-[calc(100vh-64px)] overflow-auto`}
@@ -113,14 +126,15 @@ const Navbar = () => {
             <li className="md:hidden">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfdoTOdGclvdZak8o74nKJm_X3c19SF7bxTnl5kueVu2nPVNQ/viewform"
-            
                 rel="noopener noreferrer"
               >
-                <button className="w-full md:w-auto text-center py-3 px-5 font-bold text-white rounded-3xl
+                <button
+                  className="w-full md:w-auto text-center py-2  font-bold text-white rounded-3xl
              bg-[#524dd3]
              shadow shadow-cyan-200/40
                 active:scale-95
-               transition-transform duration-200">
+               transition-transform duration-200"
+                >
                   Become a Member
                 </button>
               </a>

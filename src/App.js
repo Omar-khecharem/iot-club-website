@@ -11,9 +11,9 @@ function App() {
   const [showButton, setShowButton] = useState(false);
 
   // Bloquer le clic droit
-  useEffect(() => {
-    document.addEventListener("contextmenu", (e) => e.preventDefault());
-  }, []);
+  // useEffect(() => {
+  //   document.addEventListener("contextmenu", (e) => e.preventDefault());
+  // }, []);
 
   // Détecter le scroll
   useEffect(() => {
